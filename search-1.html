@@ -1,0 +1,79 @@
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; }
+  .search-container { max-width: 650px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+  .search-box { border: 2px solid #dfe1e5; border-radius: 24px; padding: 12px 20px; font-size: 16px; color: #202124; margin-bottom: 25px; display: flex; align-items: center; }
+  
+  /* AI摘要卡片样式 - 自变量操纵区 */
+  .ai-summary { background-color: #f0f4f9; border-radius: 12px; padding: 20px; margin-bottom: 25px; border: 1px solid #e8eaed; }
+  .ai-title { font-size: 14px; color: #1a73e8; font-weight: bold; margin-bottom: 10px; display: flex; align-items: center; }
+  .ai-content { font-size: 15px; line-height: 1.6; color: #3c4043; }
+
+  /* 常规搜索结果样式 */
+  .result-item { margin-bottom: 25px; }
+  .result-url { font-size: 13px; color: #202124; margin-bottom: 4px; }
+  /* 修改标题为真实的超链接样式 */
+  .result-title { font-size: 18px; color: #1a0dab; text-decoration: none; margin: 0 0 4px 0; display: block; width: fit-content; }
+  .result-title:hover { text-decoration: underline; }
+  .result-snippet { font-size: 14px; color: #4d5156; line-height: 1.58; }
+</style>
+
+<div class="search-container">
+  <div class="search-box">🔍 维生素A可以预防麻疹吗？</div>
+
+  <div class="ai-summary" id="ai-box">
+    <div class="ai-title">✨ AI 智能总结</div>
+    <div class="ai-content">
+      <p><strong>维生素 A 不能预防麻疹。</strong>目前唯一经实证有效的预防方法是接种 MMR（麻疹、腮腺炎、风疹）疫苗。</p>
+      
+      <p>虽然维生素 A 无法阻断病毒感染，但它在麻疹的临床治疗中扮演着重要角色。以下是关于维生素 A 与麻疹关系的详细说明：</p>
+      
+      <p><strong>1. 维生素 A 的真实作用：辅助治疗与减少并发症</strong><br>
+      虽然不能预防感染，但根据世界卫生组织 (WHO) 的建议，所有患有麻疹的儿童都应在 24 小时内补充两剂维生素 A。其主要作用包括：<br>
+      • <strong>降低死亡率</strong>：研究显示，补充大剂量维生素 A 可使 2 岁以下住院患儿的死亡率降低。<br>
+      • <strong>预防并发症</strong>：麻疹感染会导致体内维生素 A 水平急剧下降，及时补充可以预防因缺乏导致的眼部损伤和失明。<br>
+      • <strong>免疫修复</strong>：有助于免疫系统恢复，减少肺炎等严重并发症的发生。</p>
+      
+      <p><strong>2. 预防麻疹的科学方法</strong><br>
+      • <strong>疫苗接种</strong>：接种两剂 MMR 疫苗对麻疹的保护力可达 97%。<br>
+      • <strong>个人卫生</strong>：在流行期间避免前往人群密集的公共场所，勤洗手。</p>
+      
+      <p style="color: #d93025;"><strong>⚠️ 重要警告：切勿擅自大量补充</strong><br>
+      虽然维生素 A 对患者有益，但必须在医生指导下使用。长期或过量服用会导致维生素 A 中毒，引发肝功能受损、骨骼问题、视力模糊，甚至死亡。孕妇过量摄取维生素 A 可能导致胎儿严重畸形。</p>
+    </div>
+  </div>
+
+  <div class="result-item">
+    <a href="https://www.who.int/zh/news-room/fact-sheets/detail/measles" target="_blank" class="result-title" onclick="recordClick()">麻疹</a>
+    <div class="result-snippet">2025年11月28日—麻疹没有特效治疗方法。护理应侧重于缓解症状，使患者感到…</div>
+  </div>
+
+  <div class="result-item">
+    <a href="https://www.cochrane.org/zh-hans/evidence/CD001479_vitamin-measles-children#:~:text=%E9%BA%BB%E7%96%B9%E6%98%AF%E7%97%85%E6%AF%92%E5%BC%95%E8%B5%B7%E7%9A%84%EF%BC%8C%E5%B9%B6%E4%B8%94%E4%BC%9A%E5%BC%95%E8%B5%B7%E7%9B%B8%E5%BA%94%E7%9A%84%E5%B9%B6%E5%8F%91%E7%97%87%EF%BC%8C%E6%AF%94%E5%A6%82%E8%82%BA%E7%82%8E%E3%80%82%E9%BA%BB%E7%96%B9%E6%98%AF%E4%BD%8E%E6%94%B6%E5%85%A5%E5%9B%BD%E5%AE%B6%E5%84%BF%E7%AB%A5%E6%AD%BB%E4%BA%A1%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8E%9F%E5%9B%A0%EF%BC%8C%E5%9C%A8%E7%BB%B4%E7%94%9F%E7%B4%A0A%E7%BC%BA%E4%B9%8F%E7%9A%84%E5%84%BF%E7%AB%A5%E4%B8%AD%E5%B0%A4%E4%B8%BA%E5%8D%B1%E9%99%A9.%E8%BF%99%E9%A1%B9%E7%BB%BC%E8%BF%B0%E7%BA%B3%E5%85%A5%E5%85%AB%E9%A1%B9%E8%AF%95%E9%AA%8C%EF%BC%8C%E6%B6%89%E5%8F%8A2574%E5%90%8D%E5%8F%82%E4%B8%8E%E8%80%85%EF%BC%8C%E7%A0%94%E7%A9%B6%E5%8F%91%E7%8E%B0%E6%8E%A5%E5%8F%97%E7%BB%B4%E7%94%9F%E7%B4%A0A%E6%B2%BB%E7%96%97%E7%9A%84%E5%84%BF%E7%AB%A5%E7%9A%84%E6%AD%BB%E4%BA%A1%E7%8E%87%E5%B9%B6%E6%97%A0%E6%98%BE%E8%91%97%E9%99%8D%E4%BD%8E%EF%BC%8C%E7%84%B6%E8%80%8C%E6%9C%8D%E7%94%A8%E5%A4%A7%E5%89%82%E9%87%8F%E7%BB%B4%E7%94%9F%E7%B4%A0A%EF%BC%88200000%E5%9B%BD%E9%99%85%E5%8D%95%E4%BD%8D%EF%BC%88international%20units%2C%20IUs%EF%BC%89%E6%AF%8F%E5%A4%A9%EF%BC%8C%E6%9C%8D%E7%94%A8%E4%B8%A4%E5%A4%A9%EF%BC%89%E5%8F%AF%E4%BB%A5%E9%99%8D%E4%BD%8E2%E5%B2%81%E4%BB%A5%E4%B8%8B%E9%BA%BB%E7%96%B9%E4%BD%8F%E9%99%A2%E5%84%BF%E7%AB%A5%E6%AD%BB%E4%BA%A1%E4%BA%BA%E6%95%B0%E3%80%82%E5%B9%B6%E4%B8%94%E6%9C%8D%E7%94%A8%E4%B8%A4%E5%80%8D%E5%89%82%E9%87%8F%E7%BB%B4%E7%94%9F%E7%B4%A0A%E4%B8%8D%E4%BC%9A%E5%A4%AA%E6%98%82%E8%B4%B5%EF%BC%8C%E4%B9%9F%E4%B8%8D%E5%A4%AA%E5%8F%AF%E8%83%BD%E4%BA%A7%E7%94%9F%E4%B8%8D%E8%89%AF%E5%BD%B1%E5%93%8D%E3%80%82%20%E4%BD%9C%E8%80%85%E8%AE%A4%E4%B8%BA%EF%BC%8C%E5%A4%A7%E5%89%82%E9%87%8F%E7%BB%B4%E7%94%9F%E7%B4%A0A%E4%BC%9A%E6%9C%89%E6%95%88%E7%9A%84%E5%87%8F%E5%B0%91%E4%B8%A4%E5%B2%81%E4%BB%A5%E4%B8%8B%E5%84%BF%E7%AB%A5%E9%BA%BB%E7%96%B9%E6%AD%BB%E4%BA%A1%E7%8E%87%E5%92%8C%E4%B8%8D%E8%89%AF%E5%8F%8D%E5%BA%94%E3%80%82%E6%B2%A1%E6%9C%89%E8%B6%B3%E5%A4%9F%E7%9A%84%E8%AF%81%E6%8D%AE%E5%BE%97%E5%87%BA%E6%9C%89%E5%85%B3%E9%A2%84%E9%98%B2%E5%84%BF%E7%AB%A5%E8%82%BA%E7%82%8E%E6%88%96%E5%85%B6%E4%BB%96%E5%B9%B6%E5%8F%91%E7%97%87%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7%E7%9A%84%E7%9B%B8%E5%85%B3%E7%BB%93%E8%AE%BA%E3%80%82%E4%B8%8D%E8%BF%87%EF%BC%8C%E8%AF%81%E6%8D%AE%E8%B4%A8%E9%87%8F%E6%99%AE%E9%81%8D%E4%B8%AD%E7%AD%89%E6%B0%B4%E5%B9%B3%E3%80%82%E6%9C%AA%E6%9D%A5%E9%9C%80%E8%A6%81%E6%9B%B4%E9%AB%98%E8%B4%A8%E9%87%8F%E7%9A%84%E9%9A%8F%E6%9C%BA%E8%AF%95%E9%AA%8C%E6%9D%A5%E8%AF%84%E4%BC%B0%E7%BB%B4%E7%94%9F%E7%B4%A0A%E6%B2%BB%E7%96%97%E5%84%BF%E7%AB%A5%E9%BA%BB%E7%96%B9%E7%9A%84%E7%96%97%E6%95%88%E3%80%82%20%E9%98%85%E8%AF%BB%E5%AE%8C%E6%95%B4%E6%91%98%E8%A6%81.%20%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF.%20%E9%BA%BB%E7%96%B9%E6%98%AF%E5%84%BF%E7%AB%A5%E5%8F%91%E7%97%85%E7%8E%87%E5%92%8C%E6%AD%BB%E4%BA%A1%E7%8E%87%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8E%9F%E5%9B%A0%E3%80%82%E7%BB%B4%E7%94%9F%E7%B4%A0A%E7%BC%BA%E4%B9%8F%E6%98%AF%E4%B8%A5%E9%87%8D%E9%BA%BB%E7%96%B9%E6%84%9F%E6%9F%93%E7%9A%84%E4%B8%80%E4%B8%AA%E5%85%AC%E8%AE%A4%E7%9A%84%E5%8D%B1%E9%99%A9%E5%9B%A0%E7%B4%A0%E3%80%82" target="_blank" class="result-title" onclick="recordClick()">维生素A治疗儿童麻疹</a>
+    <div class="result-snippet">2005年10月19日—麻疹是病毒引起的，并且会引起相应的并发症，比如肺炎。麻疹是低收入国家儿童死亡的主要原因，…</div>
+  </div>
+
+  <div class="result-item">
+    <a href="https://travelmedicine.org.tw/information/content.asp?ID=74" target="_blank" class="result-title" onclick="recordClick()">麻疹与德国麻疹 - 旅行医学教育训练中心</a>
+    <div class="result-snippet">2014年11月16日—世界卫生组织建议为了降低麻疹并发症，所有感染麻疹的儿童都应接受维生素A的补充及治疗。［流…</div>
+  </div>
+
+  <div class="result-item">
+    <a href="facebook.com/hemodialysis.taiwan/posts/美國麻疹疫情再掀新風險維生素a中毒案例增加隨著美國麻疹疫情持續擴散近期醫界觀察到令人擔憂的現象部分兒童因過量服用維生素a導致肝功能損傷等嚴重健康問題根據德州拉伯/1192637975752398/#:~:text=【美國麻疹疫情再掀新風險：維生素A中毒案例增加】%20隨著美國麻疹疫情持續擴散，近期醫界觀察到令人擔憂%20的現象：部分兒童因過量服用維生素A，導致肝功能損%20傷等嚴重健康問題。%20根據德州拉伯克Covenant兒童醫院報告，多名未接種疫%20苗的兒童因大量攝取維生素A而出現肝臟異常，疑似與%20社群媒體及部分健康名人宣稱「維生素A可預防麻疹」,（MMR）疫苗。%20維生素A雖然在醫師監督下能協助麻疹患者復原，但過%20量服用將造成中毒風險，引發肝臟損傷、視力模糊、骨%20骼問題，甚至可能導致孕婦胎兒畸形。%20美國營養補充品協會（CRN）也呼籲家長，切勿擅自給%20予兒童高劑量維生素A。%20點評：反疫苗ㄓㄓ不意外，可憐孩子們了." target="_blank" class="result-title" onclick="recordClick()">维生素A中毒案例增加 随着美国麻疹疫情持续扩散</a>
+    <div class="result-snippet">2025年3月29日—【美国麻疹疫情再掀新风险：维生素A中毒案例增加】随着美国麻⋯</div>
+  </div>
+
+</div>
+
+<input type="hidden" id="click_counter" value="0">
+
+<script>
+  let clickCount = 0;
+
+  // 记录点击次数的函数
+  function recordClick() {
+    clickCount++;
+    document.getElementById('click_counter').value = clickCount;
+    // 供你在浏览器控制台测试时查看是否成功计次
+    console.log("当前被试总点击次数: " + clickCount);
+  }
+</script>
